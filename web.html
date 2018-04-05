@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>web</title>
+	<link rel="stylesheet" type="text/css" href="./webix.trial.complete/webix/codebase/webix.css" >
+	<script type="text/javascript" src="./webix.trial.complete/webix/codebase/webix.js" ></script>
+</head>
+<body>
+	<div id="box" style="width:600px;height:600px;"></div>
+	<script>
+		dtable = new webix.ui({
+		container:"box",//绑定容器，和html-div中的id绑定
+		view:"datatable",//webix应用的属性，datatable为表格
+		columns:[
+		{id:"title",header:"123456789",fillspace:true},
+		{id:"number",header:"数量",width:100}
+		]
+	});
+	</script>
+</body>
+</html>
