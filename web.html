@@ -8,13 +8,26 @@
 <body>
 	<div id="box" style="width:600px;height:600px;"></div>
 	<script>
+		//教程链接：https://webix.com/quick-start/datatable.html#!/7
 		dtable = new webix.ui({
 		container:"box",//绑定容器，和html-div中的id绑定
 		view:"datatable",//webix应用的属性，datatable为表格
-		columns:[
-		{id:"title",header:"123456789",fillspace:true},
-		{id:"number",header:"数量",width:100}
-		]
+		columns:[//列标题和属性
+		{id:"title",header:"姓名",fillspace:true},
+		{id:"number",header:"年龄",width:100}
+		],
+		datatype:"json",//数据格式为json
+		//url:"data/data.csv" 可调用本地数据
+		//url:"api.json" 可调用数据库接口（注意：跨域问题）
+		//数据访问教程：https://docs.webix.com/datatable__loading_data.html
+		data:[//存放数据
+		{title:"园园",number:"12"},
+		{title:"芳芳",number:"13"}
+		],
+		select:"cell",//选择:row整行；column整列;cell单个
+		multiselect:true,//按住shift可多选
+		blockselect:"box",
+		//拖拽选择,属性：true选完再变绿;select拖的时候就变绿;box鼠标拉方块来选择
 	});
 	</script>
 </body>
